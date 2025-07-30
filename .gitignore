@@ -1,43 +1,98 @@
 # Entornos virtuales
 venv/
 env/
+sklearn-env/
 
 # Archivos de Python
 __pycache__/
 *.py[cod]
 *$py.class
+*.pyc
 
 # Archivos de datos grandes
 *.pt
 *.pth
 *.pkl
 *.h5
+*.dylib
+*.so
+*.bin
+*.dat
+*.zip
 
 # Archivos de desarrollo
 .DS_Store
 .idea/
 .vscode/
+*.sublime-*
 
 # Directorios de resultados
 detections/
 runs/
+*.onnx
+*.engine
+*.tflite
+*.pb
 
 # Archivos de entorno
 .env
+*.yaml
+*.yml
 
 # Archivos de sistema
 *.swp
 *.swo
 *~
+*.bak
+*.tmp
 
 # Archivos de datos
 detecciones_epps.csv
 detecciones_epps.xlsx
+*.csv
+*.xlsx
+*.json
 
-# Archivos de entrenamiento
+# Archivos de entrenamiento y modelos
 best.pt
+EPPS.pt
+*.weights
+*.cfg
 
-# Directorio de entrenamiento
+# Directorios de datos
 train/
 valid/
 test/
+data/
+
+# Archivos de Jupyter Notebook
+*.ipynb
+*.ipynb_checkpoints/
+
+# Archivos de sistema operativo
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Archivos de PyTorch
+*.pth.tar
+*.pth
+*.pt
+
+# Archivos de TensorFlow
+tfhub_modules/
+*.tflite
+*.pb
+*.h5
+
+# Archivos de logs
+*.log
+logs/
+
+# Archivos de caché
+.cache/
+.mypy_cache/
+.pytest_cache/
+*.egg-info/
+build/
+dist/

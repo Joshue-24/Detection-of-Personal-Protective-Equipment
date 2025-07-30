@@ -1,0 +1,43 @@
+# Entornos virtuales
+venv/
+env/
+
+# Archivos de Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Archivos de datos grandes
+*.pt
+*.pth
+*.pkl
+*.h5
+
+# Archivos de desarrollo
+.DS_Store
+.idea/
+.vscode/
+
+# Directorios de resultados
+detections/
+runs/
+
+# Archivos de entorno
+.env
+
+# Archivos de sistema
+*.swp
+*.swo
+*~
+
+# Archivos de datos
+detecciones_epps.csv
+detecciones_epps.xlsx
+
+# Archivos de entrenamiento
+best.pt
+
+# Directorio de entrenamiento
+train/
+valid/
+test/

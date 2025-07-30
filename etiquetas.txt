@@ -1,0 +1,10 @@
+casco
+mascarilla
+no casco
+sin mascarilla
+no chaleco seguridad
+persona
+cono seguridad
+chaleco de seguridad
+maquinaria
+vehiculo

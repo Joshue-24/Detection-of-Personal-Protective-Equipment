@@ -1,13 +1,12 @@
 # Detección de Equipos de Protección Personal (EPP)
 
-Este proyecto implementa un sistema de detección de Equipos de Protección Personal (EPP) utilizando YOLO (You Only Look Once), un modelo de detección de objetos en tiempo real. El sistema es capaz de identificar diferentes tipos de EPP en imágenes o flujos de video.
+Este proyecto implementa un sistema de detección de Equipos de Protección Personal (EPP) utilizando visión por computadora. El sistema puede identificar diferentes elementos de protección en tiempo real a partir de imágenes o flujos de video.
 
 ## Características
 
-- Detección de múltiples EPP en tiempo real
-- Procesamiento de imágenes y video
+- Detección de múltiples elementos de protección personal
+- Procesamiento en tiempo real
 - Exportación de resultados a CSV y Excel
-- Análisis estadístico de las detecciones
 - Interfaz de línea de comandos fácil de usar
 
 ## Requisitos
@@ -15,98 +14,59 @@ Este proyecto implementa un sistema de detección de Equipos de Protección Pers
 - Python 3.7 o superior
 - OpenCV
 - PyTorch
-- Ultralytics (YOLOv8)
-- scikit-learn
-- openpyxl
 - NumPy
-- Matplotlib
+- Pandas
+- Ultralytics YOLO
 
 ## Instalación
 
 1. Clona este repositorio:
    ```bash
-   git clone [URL_DEL_REPOSITORIO]
-   cd EPPS
+   git clone https://github.com/Joshue-24/Detection-of-Personal-Protective-Equipment.git
+   cd Detection-of-Personal-Protective-Equipment
    ```
 
-2. Crea un entorno virtual (recomendado):
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # En Windows: venv\Scripts\activate
-   ```
-
-3. Instala las dependencias:
+2. Instala las dependencias:
    ```bash
    pip install -r requirements.txt
    ```
 
 ## Uso
 
-### Detección en imágenes
+Para ejecutar la detección de EPP en una imagen:
 ```bash
-python Detec3.py --source imagen.jpg
+python Detec.py --source imagen.jpg
 ```
 
-### Detección en video
+Para usar la cámara en tiempo real:
 ```bash
-python Detec3.py --source video.mp4
+python Detec2.py
 ```
-
-### Detección en tiempo real desde cámara web
-```bash
-python Detec3.py --source 0
-```
-
-### Parámetros opcionales
-- `--conf`: Umbral de confianza (por defecto: 0.25)
-- `--save`: Guardar resultados
-- `--show`: Mostrar resultados en tiempo real
-
-## Estructura del Proyecto
-
-- `EPPS.pt` - Modelo YOLO pre-entrenado para la detección de EPP
-- `data.yaml` - Configuración del conjunto de datos
-- `etiquetas.txt` - Lista de etiquetas de EPP detectables
-- `Detec3.py` - Script principal de detección
-- `sort.py` - Implementación del algoritmo SORT para seguimiento de objetos
-- `train/`, `valid/`, `test/` - Directorios para entrenamiento, validación y pruebas
-- `detecciones_epps.csv` - Archivo de salida con los resultados de las detecciones
-
-## Entrenamiento del Modelo
-
-Para entrenar tu propio modelo:
-
-1. Prepara tu conjunto de datos en formato YOLO
-2. Configura el archivo `data.yaml` con las rutas de tus datos
-3. Ejecuta el entrenamiento:
-   ```bash
-   yolo task=detect mode=train model=yolov8n.pt data=data.yaml epochs=100 imgsz=640
-   ```
 
 ## Ejemplos
 
-A continuación se muestran ejemplos de la detección de EPP en acción:
+### Detección de EPP en imagen
+![Ejemplo de detección 1](epps_1.png)
 
-### Ejemplo 1
-![Detección de EPP 1](epps_1.png)
+### Detección en tiempo real
+![Ejemplo de detección 2](epps_2.png)
 
-### Ejemplo 2
-![Detección de EPP 2](epps_2.png)
+### Resultados de detección
+![Ejemplo de detección 3](epps_3.png)
 
-### Ejemplo 3
-![Detección de EPP 3](epps_3.png)
+## Estructura del Proyecto
 
-## Resultados
-
-El sistema generará:
-- Archivos de detección en formato CSV y Excel
-- Gráficos de rendimiento
-- Imágenes/videos con las detecciones marcadas
+- `Detec.py`: Script principal para detección en imágenes
+- `Detec2.py`: Script para detección en tiempo real con cámara
+- `EPPS.pt`, `best.pt`: Modelos pre-entrenados
+- `data.yaml`: Configuración de datos
+- `detecciones_epps.csv` y `detecciones_epps.xlsx`: Salidas de detección
+- `epps_1.png`, `epps_2.png`, `epps_3.png`: Imágenes de ejemplo
 
 ## Contribución
 
 Las contribuciones son bienvenidas. Por favor, abre un issue primero para discutir los cambios que te gustaría hacer.
 
-## Contacto
+## Licencia
 
-Para consultas o soporte, por favor contacta al equipo de desarrollo.
+Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.

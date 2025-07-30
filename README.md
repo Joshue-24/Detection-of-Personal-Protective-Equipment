@@ -107,10 +107,6 @@ El sistema generará:
 
 Las contribuciones son bienvenidas. Por favor, abre un issue primero para discutir los cambios que te gustaría hacer.
 
-## Licencia
-
-Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
-
 ## Contacto
 
 Para consultas o soporte, por favor contacta al equipo de desarrollo.

@@ -1,6 +1,8 @@
 # Detección de Equipos de Protección Personal (EPP)
 
 Este proyecto implementa un sistema de detección de Equipos de Protección Personal (EPP) utilizando visión por computadora. El sistema puede identificar diferentes elementos de protección en tiempo real a partir de imágenes o flujos de video.
+![Ejemplo de detección 1](epps_1.png)
+
 
 ## Características
 
